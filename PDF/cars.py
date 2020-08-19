@@ -64,7 +64,7 @@ def main(argv):
     new_summary_br = '<br/>'.join(summary)
     reports.generate_report("car_report.pdf", "Car Report", new_summary_br, cars_dict_to_table(data))
     attachment_path = pathlib.Path('car_report.pdf')
-    message = emails.generate_message('<sender>@example.com', '<recipient@example.com', 'Sales Summary', new_summary_newline, attachment_path)
+    message = emails.generate_message('<sender>@example.com', '<recipient>@example.com', 'Sales Summary', new_summary_newline, attachment_path)
     emails.send(message)
 
 
